@@ -1,7 +1,18 @@
-version : "3.3"
-services :
-  web :
-     build : .
-     ports :
-         - "8000:8000"
-
+version: "3.9"
+services: 
+  my_web_app:
+    container_name: "django-app"
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+      - django-volume:/app
+  my_database:
+    container_name: "django-mysql"
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment: 
+      MYSQL_ROOT_PASSWORD: "hammad@21"
+volumes:
+  django-volume:
