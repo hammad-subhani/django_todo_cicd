@@ -1,0 +1,10 @@
+echo "Code Cloned"
+docker build . -t django-app
+date
+whoami
+echo "docker compose is down"
+docker-compose down
+echo "docker compose is up and running"
+docker-compose up -d --no-dep --build my_web_app
+docker-compose up -d --no-dep --build my_database
+echo "cowabunga"
