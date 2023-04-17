@@ -14,5 +14,6 @@ services:
       - 3306:3306
     environment: 
       MYSQL_ROOT_PASSWORD: "hammad@21"
+      
 volumes:
   django-volume:
